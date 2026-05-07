@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Einstein - E=mc²</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Hem</a>
+        <a href="kraft.html">Kraft</a>
+        <a href="energi.html">Energi</a>
+        <a href="relativitet.html">Relativitet</a>
+    </nav>
+
+    <h1>Massa-energi ekvivalens</h1>
+    
+  
+
+    <div class="rakne-box">
+        <input type="number" id="massaM" placeholder="Massa (kg)">
+        <button onclick="raknaRelativitet()">Räkna ut energi</button>
+        <p id="resultatM"></p>
+    </div>
+  <div class="fysiker-box">
+        <img src="einstein.png" alt="Albert Einstein" class="fysiker-bild">
+        <p><em>"Fantasi är viktigare än kunskap."</em></p>
+    </div>
+    <button onclick="rensare()">Rensa</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -31,10 +31,13 @@ function raknaEnergi() {
         return;
     }
 
+    m = Number(m);
+    v = Number(v);
+    
     let E = 0.5 * m * v * v;
 
     document.getElementById("resultatE").innerText =
-        "Energin är: " + E + " J";
+        "Energin är: " + E + " J" + "    (Uträckning: 0.5 * " + m + " kg *" + v + "m/s²)"
 }
 
 //formulär som är skyddad
@@ -53,14 +56,36 @@ function visaNamn() {
 }
 function rensare() {
     // Rensar alla input-rutor
-    document.getElementById("massa").value = "";
-    document.getElementById("acceleration").value = "";
-    document.getElementById("massaE").value = "";
-    document.getElementById("hastighet").value = "";
-    document.getElementById("namn").value = "";
-    
-    // Rensar texterna där resultaten stod
-    document.getElementById("resultat").innerText = "";
-    document.getElementById("resultatE").innerText = "";
-    document.getElementById("namnOutput").innerText = "";
+    const ids = ["massa", "acceleration", "massaE", "hastighet", "namn"];
+    const outputIds = ["resultat", "resultatE", "namnOutput"];
+
+    ids.forEach(id => {
+        let element = document.getElementById(id);
+        if (element) {
+            element.value = "";
+        }
+    });
+
+    outputIds.forEach(id => {
+        let element = document.getElementById(id);
+        if (element) {
+            element.innerText = "";
+        }
+    });
+}
+// einsteins relativitet
+function raknaRelativitet() {
+    let m = document.getElementById("massaM").value;
+    const c = 299792458;
+
+    if (m === "") {
+        document.getElementById("resultatM").innerText = "Ange massa";
+        return;
+    }
+
+    let E = m * (c ** 2);
+
+    document.getElementById("resultatM").innerHTML = 
+        "Energi: <strong>" + E.toExponential(2) + " Joule</strong><br>" +
+        "<small>Uträkning: " + m + " * " + c + "²</small>";
 }
