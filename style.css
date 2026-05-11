@@ -49,3 +49,45 @@ footer {
 margin-top: 50px;
 padding: 20px;
 background: #e0e0e0}
+
+// Mobilanpassning för smala skärmar
+@media (max-width: 600px) {
+    
+    body {
+        padding: 10px;
+    }
+
+    // Staplar länkarna på höjden
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    nav a {
+        margin: 8px 0;
+        font-size: 1.3em;
+    }
+
+    // Gör att bilder inte blir bredare än skärmen
+    .fysiker-bild {
+        width: 70%;
+        max-width: 180px;
+    }
+
+    // Gör knappar och input lättare att trycka på med fingrarna
+    input, button {
+        width: 95%;
+        height: 45px;
+        margin: 10px auto;
+        display: block;
+        font-size: 1.1em;
+    }
+
+    // Ser till att boxar tar upp mer plats på bredden
+    .fysiker-box, .kontakt-sektion {
+        width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+    }
+}

@@ -49,10 +49,20 @@ function visaNamn() {
         document.getElementById("namnOutput").innerText = "Skriv ditt namn";
         return;
     }
+    // xss skydd
+    function visaNamn() {
+    let namn = document.getElementById("namn").value;
 
-     namn = namn.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-       "Hej " + namn;
-       document.getElementById("namnOutput").innerText = "Hej " + namn;
+    if (namn === "") {
+        document.getElementById("namnOutput").innerText = "Skriv ditt namn";
+        return;
+    }
+
+    // Rensar bort farliga tecken
+    namn = namn.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+    // Skriver ut hälsningen i HTML-elementet
+    document.getElementById("namnOutput").innerText = "Hej " + namn;
 }
 function rensare() {
     // Rensar alla input-rutor
