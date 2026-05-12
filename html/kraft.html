@@ -1,32 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Fysik sida</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav>
-    <a href="index.html">Hem</a>
-    <a href="kraft.html">Kraft</a>
-    <a href="energi.html">Energi</a>
-    <a href="relativitet.html">Relativitet</a> </nav>
+      <a href="index.html">Hem</a>
+      <a href="kraft.html">Kraft</a>
+      <a href="energi.html">Energi</a>
+      <a href="relativitet.html">Relativitet</a>
+    </nav>
 
-<h2>Räkna ut kraft</h2>
+    <h2>Räkna ut kraft</h2>
 
-<input type="number" id="massa" placeholder="Massa">
-<input type="number" id="acceleration" placeholder="Acceleration">
+    <input type="number" id="massa" placeholder="Massa" />
+    <input type="number" id="acceleration" placeholder="Acceleration" />
 
-<button onclick="raknaKraft()">Räkna</button>
+    <button onclick="raknaKraft()">Räkna</button>
 
     <p id="resultat"></p>
-<div class="fysiker-box">
-        <img src="newton.png"  class="fysiker-bild">
-        <p><em>"Kraften bakom rörelse."</em>   - Isaac Newton</p>
+    <div class="fysiker-box">
+      <img src="newton.png" class="fysiker-bild" />
+      <p><em>"Kraften bakom rörelse."</em> - Isaac Newton</p>
     </div>
     <script src="script.js"></script>
 
-    <button onclick="rensare()">Rensa </button>
-</body>
+    <button onclick="rensare()">Rensa</button>
+  </body>
 </html>
